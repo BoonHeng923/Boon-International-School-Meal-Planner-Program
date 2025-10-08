@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="root" stylesheets="@HomePage.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchoolMealPlanner.view.MealFrequencyReportController">
+   <children>
+      <VBox fx:id="backBox" layoutX="10.0" layoutY="10.0" onMouseClicked="#handleBack" prefHeight="51.0" prefWidth="123.0" styleClass="back-btn">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Back.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="185.0" layoutY="187.0" prefHeight="474.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <BarChart fx:id="mealChart" barGap="5.0" prefHeight="474.0" prefWidth="787.0" title="July Meal Frequency">
+              <xAxis>
+                <CategoryAxis label="Meal Name" prefWidth="442.0" side="BOTTOM" styleClass="card-title" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Count" side="LEFT" styleClass="card-title" />
+              </yAxis>
+               <styleClass>
+                  <String fx:value="card" />
+                  <String fx:value="card--glass" />
+               </styleClass>
+            </BarChart>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

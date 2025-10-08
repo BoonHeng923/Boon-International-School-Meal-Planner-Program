@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="1439.0" stylesheets="@IngredientOverview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchoolMealPlanner.view.FeedbackOverviewController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@IngredientOverview.css">
+         <children>
+            <SplitPane dividerPositions="0.40761353517364196" layoutX="31.0" layoutY="50.0" prefHeight="400.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="531.0" prefWidth="258.0">
+                     <children>
+                        <TableView fx:id="feedbackTable" layoutX="-39.0" layoutY="71.2" prefHeight="527.0" prefWidth="589.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="71.0">
+                          <columns>
+                            <TableColumn fx:id="mealColumn" minWidth="0.0" prefWidth="187.2000030875206" text="Meal" />
+                            <TableColumn fx:id="weekDayColumn" minWidth="0.0" prefWidth="180.00001525878906" text="Date" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="129.0" layoutY="138.0" orientation="VERTICAL" prefHeight="398.4" prefWidth="417.6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="633.0" styleClass="root">
+                                 <children>
+                                    <TextField fx:id="searchField" layoutX="228.0" layoutY="25.0">
+                                       <styleClass>
+                                          <String fx:value="search-box" />
+                                          <String fx:value="search-button" />
+                                       </styleClass></TextField>
+                                    <ButtonBar layoutX="68.8" layoutY="85.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="68.0" prefWidth="348.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="430.0">
+                                       <buttons>
+                                          <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAdd" text="Add" />
+                                          <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDelete" text="Delete" />
+                                          <Button fx:id="editButton" mnemonicParsing="false" onAction="#handleEdit" text="Edit" />
+                                          <Button fx:id="sortButton" mnemonicParsing="false" onAction="#handleSort" text="Sort">
+                                             <padding>
+                                                <Insets right="32.0" />
+                                             </padding></Button>
+                                       </buttons>
+                                    </ButtonBar>
+                                    <ImageView fitHeight="227.0" fitWidth="342.0" layoutX="491.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/FeedbackOverview3.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="261.0" prefWidth="416.0" styleClass="root">
+                                 <children>
+                                    <GridPane layoutX="24.0" layoutY="29.0" prefHeight="238.0" prefWidth="770.0" styleClass="table-grid" AnchorPane.leftAnchor="23.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.20001220703125" minWidth="10.0" prefWidth="115.99998474121095" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="565.6000152587892" minWidth="10.0" prefWidth="565.6000152587892" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="form-label" text="Meal:" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="form-label" text="Feedback type:" GridPane.rowIndex="2" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="form-label" text="Feedback:" GridPane.rowIndex="3" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="form-label" text="Submitted by:" GridPane.rowIndex="4" />
+                                          <Label fx:id="mealLabel" styleClass="info-label" text="Meal" GridPane.columnIndex="1" />
+                                          <Label fx:id="typeLabel" styleClass="info-label" text="Feedback type" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Label fx:id="contentLabel" styleClass="info-label" text="Feedback" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Label fx:id="submitterLabel" styleClass="info-label" text="Submitted by" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <Label fx:id="weekDayLabel" styleClass="info-label" text="Week &amp; Day" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="form-label" text="Week &amp; Day:" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <VBox fx:id="backBox" layoutX="10.0" layoutY="10.0" onMouseClicked="#handleBack" prefHeight="51.0" prefWidth="123.0" styleClass="back-btn">
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

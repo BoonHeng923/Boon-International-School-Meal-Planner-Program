@@ -1,0 +1,80 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #fff5e6, #ffe6e6);
+    -fx-padding: 20px;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-color: #c2b280;
+    -fx-border-width: 4px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0.5, 0, 4);
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.envelopeBox {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d4af37;
+    -fx-border-width: 4px 4px 2px 4px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0.1, 0, 4);
+    -fx-background-insets: 0;
+}
+
+.mealTitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5c4033;
+    -fx-font-family: "Georgia", serif;
+}
+
+.mealDescription {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ba6b6b;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.mealInfo {
+    -fx-font-size: 13px;
+    -fx-text-fill: #957e71;
+}
+
+.mealImage {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 10, 0.2, 0, 2);
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-border-color: #d1aa31;
+    -fx-border-width: 3px;
+}
+
+.okButton {
+    -fx-background-color: linear-gradient(to bottom, #3cc57a, #2fb167);
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-background-radius: 10;
+    -fx-padding: 8 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0.2, 0, 2);
+    -fx-cursor: hand;
+}
+
+.okButton:hover { -fx-background-color: #ece0cb; }
+
+.okButton:pressed { -fx-translate-y: 1; }
+
+.function-btn {
+    -fx-background-color: linear-gradient(to bottom, #fcefd9, #f7d8aa);
+    -fx-text-fill: #263e50;
+    -fx-font-weight: 700;
+    -fx-background-radius: 10;
+    -fx-padding: 8 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0.2, 0, 2);
+    -fx-cursor: hand;
+}
+
+.function-btn:hover {
+    -fx-background-color: linear-gradient(to bottom, #fbc16a, #f57e77);
+}
+
+.function-btn:pressed {
+    -fx-translate-y: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.3, 0, 1);
+}

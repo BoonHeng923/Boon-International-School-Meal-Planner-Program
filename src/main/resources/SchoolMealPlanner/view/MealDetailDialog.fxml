@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="546.0" prefWidth="679.0" stylesheets="@MealDetailDialog.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchoolMealPlanner.view.MealDetailDialogController">
+   <children>
+      <VBox layoutX="100.8" layoutY="48.0" prefHeight="450.0" prefWidth="514.0" styleClass="envelopeBox" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0">
+         <children>
+            <Label fx:id="mealNameLabel" alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="349.0" styleClass="mealTitle" text="Meal name" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="130.0" right="130.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="15.0" top="15.0" />
+               </padding></Label>
+            <ImageView fx:id="mealImage" fitHeight="230.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" styleClass="mealImage">
+               <VBox.margin>
+                  <Insets left="190.0" right="190.0" />
+               </VBox.margin></ImageView>
+            <Label fx:id="descriptionLabel" styleClass="mealDescription" text="Description">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" top="15.0" />
+               </padding></Label>
+            <Label fx:id="caloriesLabel" styleClass="mealInfo" text="Calories">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" />
+               </padding></Label>
+            <Label fx:id="ingredientsLabel" styleClass="mealInfo" text="Ingredients" textFill="#d91c1c">
+               <padding>
+                  <Insets left="15.0" />
+               </padding></Label>
+            <ButtonBar>
+               <buttons>
+                  <Button fx:id="editButton" mnemonicParsing="false" onAction="#handleEditMeal" styleClass="function-btn" text="Edit Meal" />
+                  <Button mnemonicParsing="false" onAction="#handleOk" styleClass="okButton" text="Ok" />
+               </buttons>
+               <padding>
+                  <Insets right="15.0" top="15.0" />
+               </padding>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

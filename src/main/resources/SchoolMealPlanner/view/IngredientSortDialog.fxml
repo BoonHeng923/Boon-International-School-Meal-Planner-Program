@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="459.0" styleClass="sort-dialog" stylesheets="@FeedbackIngredient.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchoolMealPlanner.view.IngredientSortDialogController">
+   <children>
+      <Text layoutX="82.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sort-title" text="How would you like to sort?" wrappingWidth="271.53436279296875" AnchorPane.bottomAnchor="235.0" AnchorPane.leftAnchor="82.0" />
+      <VBox layoutX="76.0" layoutY="84.0" prefHeight="154.0" prefWidth="284.0" styleClass="sort-option" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.80000000000001">
+         <children>
+            <RadioButton fx:id="nameAZ" mnemonicParsing="false" text="Sort by name (A to Z)">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sortToggleGroup" />
+               </toggleGroup>
+               <VBox.margin>
+                  <Insets bottom="18.0" top="18.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="nameZA" mnemonicParsing="false" text="Sort by name (Z to A)" toggleGroup="$sortToggleGroup">
+               <VBox.margin>
+                  <Insets bottom="18.0" />
+               </VBox.margin></RadioButton>
+            <RadioButton fx:id="calorieAsc" mnemonicParsing="false" text="Sort by calories (Smallest to Largest)" toggleGroup="$sortToggleGroup">
+               <VBox.margin>
+                  <Insets bottom="18.0" />
+               </VBox.margin></RadioButton>
+            <RadioButton fx:id="calorieDesc" mnemonicParsing="false" text="Sort by calories (Largest to Smallest)" toggleGroup="$sortToggleGroup">
+               <VBox.margin>
+                  <Insets bottom="18.0" />
+               </VBox.margin></RadioButton>
+         </children>
+      </VBox>
+      <ButtonBar layoutX="185.0" layoutY="282.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <buttons>
+            <Button fx:id="okButton" mnemonicParsing="false" onAction="#handleOk" styleClass="ok-btn" text="Ok" />
+            <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" styleClass="cancel-btn" text="Cancel" />
+         </buttons>
+      </ButtonBar>
+      <ImageView fitHeight="116.0" fitWidth="110.0" layoutX="-8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/Decoration2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="92.0" fitWidth="89.0" layoutX="-8.0" layoutY="241.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/Decoration3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="122.0" fitWidth="158.0" layoutX="327.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/Decoration.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchoolMealPlanner.view.RootLayoutController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="_File">
+                  <items>
+                    <MenuItem onAction="#handleClose" text="_Close">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="_Help">
+                  <items>
+                    <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#handleAbout" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox fx:id="topNavBar" maxWidth="1.7976931348623157E308" prefHeight="131.0" prefWidth="915.0" styleClass="root" stylesheets="@RootLayout.css">
+               <children>
+                  <VBox fx:id="homePageBox" onMouseClicked="#handleHomePageClick" prefHeight="200.0" prefWidth="100.0" styleClass="account-icon" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="106.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/SchoolLogo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                     </HBox.margin></VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                  <VBox fx:id="mealPlanningBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleMealPlanningClick" prefHeight="120.0" prefWidth="120.0" styleClass="icon-box" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="125.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/MealPlanningMenuBar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="15.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox fx:id="ingredientsBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleIngredientsClick" prefHeight="120.0" prefWidth="120.0" styleClass="icon-box" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="133.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true" styleClass="separator-line">
+                           <image>
+                              <Image url="@../../images/IngredientsMenuBar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="15.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="120.0" styleClass="icon-box" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="feedbackBox" fitHeight="115.0" fitWidth="86.0" onMouseClicked="#handleFeedbackClick" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/FeedbackMenuBar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="15.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox fx:id="reportBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="120.0" styleClass="icon-box" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="135.0" fitWidth="84.0" onMouseClicked="#handleReportClick" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/ReportMenuBar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="15.0" top="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                  <VBox onMouseClicked="#handleUserProfileClick" prefHeight="122.0" prefWidth="120.0" styleClass="account-icon" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fitHeight="118.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/User.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin></VBox>
+                  <VBox prefHeight="138.0" prefWidth="122.0" styleClass="account-icon" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ImageView fx:id="logoutBox" fitHeight="111.0" fitWidth="104.0" onMouseClicked="#handleLogoutClick" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/Logout.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="5.0" right="15.0" top="5.0" />
+                     </HBox.margin></VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

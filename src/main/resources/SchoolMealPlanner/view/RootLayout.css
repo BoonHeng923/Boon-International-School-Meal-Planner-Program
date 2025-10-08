@@ -1,0 +1,29 @@
+.root {
+    -fx-background-color: #cfbf99;
+}
+
+.icon-box {
+    -fx-background-color: #cfbf99;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 12px;
+    -fx-alignment: center;
+    -fx-spacing: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0.2, 0, 2);
+    -fx-cursor: hand;
+}
+
+.icon-box:hover {
+    -fx-border-color: #007acc;
+    -fx-background-color: #e6e0d3;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0.3, 0, 3);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.account-icon {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0.3, 0, 2);
+    -fx-cursor: hand;
+}

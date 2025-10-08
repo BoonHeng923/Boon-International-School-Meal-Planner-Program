@@ -1,0 +1,39 @@
+.label {
+    -fx-text-fill: #333;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: #fff6e9;
+    -fx-border-color: #ffd6b0;
+    -fx-border-radius: 8;
+    -fx-padding: 2 15;
+    -fx-pref-width: 220px;
+}
+
+.text-field:focused {
+    -fx-border-color: #ffb482;
+    -fx-background-color: #fff0dc;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to right, #6c63ff, #958dff);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 6 16;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+    -fx-effect: dropshadow(gaussian, rgba(108, 99, 255, 0.15), 6, 0.1, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #594ce0, #756aff);
+    -fx-effect: dropshadow(gaussian, rgba(89, 76, 224, 0.3), 8, 0.2, 0, 3);
+}
+
+.button-bar {
+    -fx-padding: 10 0 0 0;
+    -fx-alignment: CENTER_RIGHT;
+}

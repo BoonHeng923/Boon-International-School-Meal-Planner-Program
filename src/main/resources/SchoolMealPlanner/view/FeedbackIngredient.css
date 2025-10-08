@@ -1,0 +1,143 @@
+.sort-dialog {
+    -fx-background-color: linear-gradient(to bottom right, #fff5e6, #ffe6e6);
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-border-color: #e7e2d6;
+    -fx-border-width: 1.5;
+    -fx-padding: 22;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 18, 0.15, 0, 6);
+    -fx-font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.sort-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #2c2c2c;
+    -fx-padding: 0 0 8 0;
+}
+
+.sort-option {
+    -fx-font-size: 13.5px;
+    -fx-text-fill: #383838;
+    -fx-padding: 6 8 6 6;
+    -fx-background-radius: 10;
+}
+
+.sort-option:hover {
+    -fx-background-color: rgba(111, 168, 254, 0.10);
+}
+
+.radio-button .radio {
+    -fx-background-color: white;
+    -fx-border-color: #5aa6ff;
+    -fx-border-width: 2;
+    -fx-background-radius: 999;
+    -fx-border-radius: 999;
+    -fx-padding: 3.5;
+}
+
+.radio-button:selected .radio {
+    -fx-background-color: #eaf3ff;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #2f80ed;
+    -fx-background-insets: 0;
+    -fx-background-radius: 999;
+}
+
+.radio-button:focused .radio {
+    -fx-effect: dropshadow(gaussian, rgba(47,128,237,0.45), 8, 0.3, 0, 0);
+}
+
+
+.ok-btn {
+    -fx-background-color: linear-gradient(to bottom, #3cc57a, #2fb167);
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-background-radius: 10;
+    -fx-padding: 8 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0.2, 0, 2);
+    -fx-cursor: hand;
+}
+
+.ok-btn:hover { -fx-background-color: #ece0cb; }
+
+.ok-btn:pressed { -fx-translate-y: 1; }
+
+.cancel-btn {
+    -fx-background-color: linear-gradient(to bottom, #f43a05, #da5a33);
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-background-radius: 10;
+    -fx-padding: 8 18;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 8, 0.2, 0, 2);
+    -fx-cursor: hand;
+}
+
+.cancel-btn:hover { -fx-background-color: #ece0cb; }
+.cancel-btn:pressed { -fx-translate-y: 1; }
+
+.btn {
+    -fx-background-color: linear-gradient(to right, #6c63ff, #958dff);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 6 16;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+    -fx-effect: dropshadow(gaussian, rgba(108, 99, 255, 0.15), 6, 0.1, 0, 2);
+}
+
+.btn:hover {
+    -fx-background-color: linear-gradient(to right, #594ce0, #756aff);
+    -fx-effect: dropshadow(gaussian, rgba(89, 76, 224, 0.3), 8, 0.2, 0, 3);
+}
+
+.btn:pressed {
+    -fx-background-color: #4839c6;
+}
+
+.form-label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #2f2f2f;
+    -fx-font-weight: bold;
+}
+
+.form-field, .combo-field, .area-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #e6e6e9;
+    -fx-border-width: 1.2;
+    -fx-padding: 8 10 8 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.03), 4, 0.2, 0, 1);
+}
+
+.form-field:focused, .combo-field:focused, .area-field:focused {
+    -fx-border-color: #2f80ed;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(47,128,237,0.18), 10, 0.35, 0, 2);
+}
+
+.combo-field .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+}
+
+.combo-field .arrow { -fx-background-color: #7aa7e9; }
+
+.combo-field .list-cell { -fx-padding: 6 10; }
+
+.combo-field .list-view {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.16), 10, 0.25, 0, 2);
+}
+
+.area-field {
+    -fx-padding: 10;
+    -fx-pref-row-count: 3;
+    -fx-wrap-text: true;
+}

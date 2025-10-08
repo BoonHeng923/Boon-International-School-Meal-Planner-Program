@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane stylesheets="@HomePage.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchoolMealPlanner.view.MealPlanningOverviewController">
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="root">
+         <children>
+            <VBox layoutX="20.0" layoutY="112.0" prefHeight="366.0" prefWidth="860.0" AnchorPane.bottomAnchor="122.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="112.0">
+               <children>
+                  <Label fx:id="weekLabel" text="July Week 2" visible="false" />
+                  <GridPane fx:id="mealGrid" alignment="CENTER" hgap="15.0" prefHeight="237.0" prefWidth="860.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <VBox.margin>
+                        <Insets top="55.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox fx:id="mondayBox" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="340.0" prefWidth="100.0" styleClass="meal-box">
+                           <children>
+                              <Text fx:id="monday" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="card-title" text="Monday">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" top="20.0" />
+                                 </VBox.margin></Text>
+                              <ImageView fx:id="mondayImage" fitHeight="150.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true" styleClass="mealImage">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></ImageView>
+                              <Label fx:id="mondayMeal" styleClass="report-title" text="Label">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></Label>
+                              <Button fx:id="mondayButton" mnemonicParsing="false" styleClass="card-btn" text="View details">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></Button>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="tuesdayBox" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="340.0" prefWidth="100.0" styleClass="meal-box" GridPane.columnIndex="1">
+                           <children>
+                              <Text fx:id="tuesday" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="card-title" text="Tuesday">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" top="20.0" />
+                                 </VBox.margin></Text>
+                              <ImageView fx:id="tuesdayImage" fitHeight="150.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true" styleClass="mealImage">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></ImageView>
+                              <Label fx:id="tuesdayMeal" styleClass="report-title" text="Label">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></Label>
+                              <Button fx:id="tuesdayButton" mnemonicParsing="false" styleClass="card-btn" text="View details">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></Button>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="wednesdayBox" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="340.0" prefWidth="100.0" styleClass="meal-box" GridPane.columnIndex="2">
+                           <children>
+                              <Text fx:id="wednesday" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="card-title" text="Wednesday">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" top="20.0" />
+                                 </VBox.margin></Text>
+                              <ImageView fx:id="wednesdayImage" fitHeight="150.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true" styleClass="mealImage">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></ImageView>
+                              <Label fx:id="wednesdayMeal" styleClass="report-title" text="Label">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></Label>
+                              <Button fx:id="wednesdayButton" mnemonicParsing="false" styleClass="card-btn" text="View details">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></Button>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="thursdayBox" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="340.0" prefWidth="100.0" styleClass="meal-box" GridPane.columnIndex="3">
+                           <children>
+                              <Text fx:id="thursday" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="card-title" text="Thursday">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" top="20.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <ImageView fx:id="thursdayImage" fitHeight="150.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true" styleClass="mealImage">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></ImageView>
+                              <Label fx:id="thursdayMeal" styleClass="report-title" text="Label">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></Label>
+                              <Button fx:id="thursdayButton" mnemonicParsing="false" styleClass="card-btn" text="View details">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></Button>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="fridayBox" alignment="TOP_CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="340.0" prefWidth="100.0" styleClass="meal-box" GridPane.columnIndex="4">
+                           <children>
+                              <Text fx:id="friday" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="card-title" text="Friday">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" top="20.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <ImageView fx:id="fridayImage" fitHeight="150.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true" styleClass="mealImage">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></ImageView>
+                              <Label fx:id="fridayMeal" styleClass="report-title" text="Label">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></Label>
+                              <Button fx:id="fridayButton" mnemonicParsing="false" styleClass="card-btn" text="View details">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin></Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+                  <ButtonBar />
+               </children>
+            </VBox>
+            <VBox fx:id="backBox" layoutX="10.0" layoutY="10.0" onMouseClicked="#handleBack" prefHeight="51.0" prefWidth="123.0" styleClass="back-btn">
+               <children>
+                  <ImageView fitHeight="64.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Back.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <ButtonBar layoutX="132.0" layoutY="478.0" prefHeight="34.0" prefWidth="719.0" AnchorPane.leftAnchor="132.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="490.0">
+               <buttons>
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAddMeal" prefHeight="26.0" styleClass="function-btn" text="Add New Meal" />
+                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDeleteMeal" styleClass="function-btn" text="Delete Meal" />
+                  <Button fx:id="downloadPdfButton" mnemonicParsing="false" onAction="#handleDownloadPdf" prefHeight="16.0" prefWidth="215.0" styleClass="function-btn" text="Download Meal Planning as PDF" />
+               </buttons>
+            </ButtonBar>
+            <ComboBox fx:id="weekSelector" layoutX="80.0" layoutY="68.0" prefWidth="150.0" styleClass="combo-field" stylesheets="@HomePage.css" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

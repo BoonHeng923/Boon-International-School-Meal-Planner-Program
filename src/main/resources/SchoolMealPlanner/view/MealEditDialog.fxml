@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="673.0" prefWidth="502.0" styleClass="sort-dialog" stylesheets="@FeedbackIngredient.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchoolMealPlanner.view.MealEditDialogController">
+   <children>
+      <VBox layoutX="44.0" layoutY="63.0" prefHeight="499.0" prefWidth="412.0">
+         <children>
+            <GridPane prefHeight="489.0" prefWidth="452.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="form-label" text="Meal name:" />
+                  <Label styleClass="form-label" text="Meal image:" GridPane.rowIndex="1" />
+                  <Label styleClass="form-label" text="Image path:" GridPane.rowIndex="2" />
+                  <Label styleClass="form-label" text="Description:" GridPane.rowIndex="3" />
+                  <Label styleClass="form-label" text="Ingredients:" GridPane.rowIndex="4" />
+                  <Label styleClass="form-label" text="Week:" GridPane.rowIndex="5" />
+                  <Label styleClass="form-label" text="Day:" GridPane.rowIndex="6" />
+                  <TextField fx:id="nameField" onKeyPressed="#handleKeyNavigation" styleClass="area-field" GridPane.columnIndex="1" />
+                  <ComboBox fx:id="weekBox" onKeyPressed="#handleKeyNavigation" prefWidth="150.0" styleClass="combo-field" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="dayBox" onKeyPressed="#handleKeyNavigation" prefWidth="150.0" styleClass="combo-field" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="imagePathField" onKeyPressed="#handleKeyNavigation" styleClass="area-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextArea fx:id="descriptionField" onKeyPressed="#handleKeyNavigation" prefHeight="35.0" prefWidth="192.0" styleClass="area-field" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </GridPane.margin></TextArea>
+                  <ListView fx:id="ingredientListView" onKeyPressed="#handleKeyNavigation" prefHeight="200.0" prefWidth="200.0" styleClass="area-field" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" top="15.0" />
+                     </GridPane.margin></ListView>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <GridPane prefHeight="69.0" prefWidth="250.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.00000762939453" minWidth="10.0" prefWidth="85.40001220703125" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.00001220703125" minWidth="10.0" prefWidth="120.59998779296875" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ImageView fx:id="imagePreview" fitHeight="60.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="chooseImageButton" mnemonicParsing="false" onAction="#handleChooseImage" onKeyPressed="#handleKeyNavigation" prefHeight="30.0" prefWidth="118.0" styleClass="btn" text="Choose image" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin></Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <ButtonBar layoutX="221.0" layoutY="588.0" AnchorPane.bottomAnchor="50.799999999999955" AnchorPane.rightAnchor="25.0">
+         <buttons>
+            <Button fx:id="okButton" mnemonicParsing="false" onAction="#handleOk" onKeyPressed="#handleKeyNavigation" prefHeight="26.0" prefWidth="51.0" styleClass="ok-btn" text="Ok" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancel" onKeyPressed="#handleKeyNavigation" styleClass="cancel-btn" text="Cancel" />
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

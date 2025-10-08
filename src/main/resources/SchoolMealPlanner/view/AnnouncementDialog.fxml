@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="435.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchoolMealPlanner.view.AnnouncementDialogController">
+   <children>
+      <ImageView fitHeight="456.0" fitWidth="810.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/Announcement.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
